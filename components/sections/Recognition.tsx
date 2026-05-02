@@ -11,9 +11,9 @@ type Award = {
 };
 
 const awards: Award[] = [
-  { title: "NVIDIA DEEP LEARNING INSTITUTE", org: "Computer Vision Specialization", year: "2024", image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1200&q=80" },
-  { title: "KAGGLE BRONZE MEDAL", org: "Plant Pathology Challenge", year: "2023", image: "https://images.unsplash.com/photo-1589330694653-efa6475306e1?auto=format&fit=crop&w=1200&q=80" },
-  { title: "DEEPLEARNING.AI", org: "Natural Language Processing Specialization", year: "2022", image: "https://images.unsplash.com/photo-1558025243-7a916027a44f?auto=format&fit=crop&w=1200&q=80" },
+  { title: "NVIDIA DEEP LEARNING INSTITUTE", org: "Computer Vision Specialization", year: "2024", image: "https://placehold.co/1200x800/222222/FFFFFF/png?text=NVIDIA+Certificate" },
+  { title: "KAGGLE BRONZE MEDAL", org: "Plant Pathology Challenge", year: "2023", image: "https://placehold.co/1200x800/222222/FFFFFF/png?text=Kaggle+Bronze+Medal" },
+  { title: "DEEPLEARNING.AI", org: "Natural Language Processing Specialization", year: "2022", image: "https://placehold.co/1200x800/222222/FFFFFF/png?text=DeepLearning.AI+Certificate" },
 ];
 
 export default function Recognition() {
