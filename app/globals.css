@@ -1,0 +1,78 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap');
+
+@layer base {
+  :root {
+    --primary:   #222222;
+    --secondary: #7B7B7B;
+    --tertiary:  #F8F8F8;
+    --white:     #FFFFFF;
+    --border:    #E5E5E5;
+  }
+}
+
+@layer base {
+  body {
+    background-color: var(--white);
+    color: var(--primary);
+    font-family: 'Space Grotesk', sans-serif;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+  ::selection {
+    background-color: var(--primary);
+    color: var(--white);
+  }
+}
+
+/* Custom Grid Background */
+.bg-grid {
+  background-image:
+    linear-gradient(rgba(34,34,34,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(34,34,34,0.05) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+/* Badge Styles */
+.badge-primary {
+  background: #222222;
+  color: #ffffff;
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+}
+
+.badge-outline {
+  background: transparent;
+  border: 1px solid #E5E5E5;
+  color: #7B7B7B;
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 40px;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .container { padding: 0 20px; }
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}

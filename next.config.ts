@@ -1,7 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  devIndicators: {
+    appIsrStatus: false, // Hides the "Static route" debug overlay
+  },
 };
 
 export default nextConfig;
