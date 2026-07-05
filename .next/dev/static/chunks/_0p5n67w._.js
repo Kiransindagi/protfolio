@@ -1385,7 +1385,7 @@ const projects = [
             "Reinforcement learning training environment"
         ],
         techStack: "Python / Reinforcement Learning / OpenEnv",
-        github: "#",
+        github: "https://huggingface.co/spaces/kiransin/openaudit",
         input: "2M+ Models & 500K+ Datasets",
         process: "Agentic Scan → Investigation → Reporting",
         output: "Comprehensive Safety & Quality Audit",
@@ -1417,6 +1417,126 @@ const projects = [
             accuracy: "95% Eff.",
             latency: "Continuous",
             gain: "32% Less Waste"
+        }
+    },
+    {
+        id: "cardiorisk-ai",
+        modelId: "SYS_08",
+        title: "CardioRisk AI",
+        type: "Healthcare · ML",
+        status: "Active Dev",
+        environment: "Jupyter / ML Pipeline",
+        description: "Heart disease risk classifier trained on 13 clinical indicators (UCI Cleveland dataset). Uses SHAP explainability to surface per-patient risk factors and tunes the decision threshold for recall, since missed diagnoses carry higher cost than false alarms in a medical context.",
+        keyComponents: [
+            "Random Forest / Logistic Regression comparison",
+            "SHAP per-patient explainability",
+            "Recall-optimized threshold tuning"
+        ],
+        techStack: "Python / Scikit-learn / SHAP / Pandas",
+        github: "https://github.com/Kiransindagi/CARDIORISK-AI",
+        input: "Patient Clinical Records (13 features)",
+        process: "Preprocessing → Model Training → SHAP Analysis",
+        output: "Disease Risk Score + Feature Explanation",
+        metrics: {
+            accuracy: "92% Recall",
+            latency: "Batch",
+            gain: "Cost-Sensitive"
+        }
+    },
+    {
+        id: "student-performance-early-warning-system",
+        modelId: "SYS_09",
+        title: "Student Performance Early Warning System",
+        type: "EdTech · ML",
+        status: "Active Dev",
+        environment: "Jupyter / ML Pipeline",
+        description: "Predicts at-risk students from demographic, family, and behavioral data rather than relying only on grades already earned. Includes a leakage-free model variant built specifically for early intervention, plus a fairness audit across gender and location.",
+        keyComponents: [
+            "Leakage-aware feature selection",
+            "Fairness audit across demographic groups",
+            "Early-intervention risk scoring"
+        ],
+        techStack: "Python / Scikit-learn / Pandas / Seaborn",
+        github: "https://github.com/Kiransindagi/student-performance-early-warning-system",
+        input: "Student Demographic & Behavioral Data",
+        process: "Feature Engineering → Model Training → Fairness Audit",
+        output: "At-Risk Student Flag + Contributing Factors",
+        metrics: {
+            accuracy: "89% AUC",
+            latency: "Batch",
+            gain: "Fair Audited"
+        }
+    },
+    {
+        id: "customer-churn-prediction",
+        modelId: "SYS_10",
+        title: "Customer Churn Prediction",
+        type: "Business Analytics · ML",
+        status: "Active Dev",
+        environment: "Jupyter / ML Pipeline",
+        description: "Telco churn prediction framed around business outcomes — translates model output into customer lifetime value at risk, segments high-churn cohorts, and recommends targeted retention actions rather than reporting a bare accuracy score.",
+        keyComponents: [
+            "Churn-risk segmentation",
+            "Customer lifetime value impact calculation",
+            "Retention strategy recommendations"
+        ],
+        techStack: "Python / Scikit-learn / Pandas / Matplotlib",
+        github: "https://github.com/Kiransindagi/Customer-Churn-Prediction",
+        input: "Customer Account & Service Usage Data",
+        process: "Feature Engineering → Classification → Business Impact Mapping",
+        output: "Churn Probability + Revenue-at-Risk Estimate",
+        metrics: {
+            accuracy: "85% F1",
+            latency: "Batch",
+            gain: "ROI Focused"
+        }
+    },
+    {
+        id: "house-price-prediction",
+        modelId: "SYS_11",
+        title: "House Price Prediction",
+        type: "Real Estate · ML",
+        status: "Active Dev",
+        environment: "Jupyter / ML Pipeline",
+        description: "Ames Housing price prediction comparing interpretable models (Ridge/Lasso) against ensemble methods (Random Forest/Gradient Boosting), with explicit handling of skewed price distributions and multicollinearity between size-related features.",
+        keyComponents: [
+            "Log-transformed regression target",
+            "VIF-based multicollinearity check",
+            "Linear vs. ensemble model comparison"
+        ],
+        techStack: "Python / Scikit-learn / Pandas / Seaborn",
+        github: "https://github.com/Kiransindagi/House-Price-Prediction",
+        input: "Property Size, Quality & Location Data",
+        process: "Feature Engineering → Model Comparison → Price Prediction",
+        output: "Estimated Sale Price + Key Value Drivers",
+        metrics: {
+            accuracy: "$18.5k RMSE",
+            latency: "Batch",
+            gain: "Interpretable"
+        }
+    },
+    {
+        id: "credit-risk-prediction",
+        modelId: "SYS_12",
+        title: "Credit Risk Prediction",
+        type: "Fintech · ML",
+        status: "Active Dev",
+        environment: "Jupyter / ML Pipeline",
+        description: "Credit scorecard model on the German Credit dataset built around cost-sensitive evaluation — since misclassifying a bad borrower as good costs far more than the reverse — with full explainability for loan-decision justification.",
+        keyComponents: [
+            "Cost-sensitive evaluation metric",
+            "Logistic regression scorecard",
+            "SHAP-based decision explainability"
+        ],
+        techStack: "Python / Scikit-learn / SHAP / Pandas",
+        github: "https://github.com/Kiransindagi/Credit-Risk-Prediction",
+        input: "Applicant Financial & Employment History",
+        process: "Preprocessing → Scorecard Modeling → Cost-Sensitive Evaluation",
+        output: "Credit Risk Classification + Justification",
+        metrics: {
+            accuracy: "94% Recall",
+            latency: "Batch",
+            gain: "Cost-Sensitive"
         }
     }
 ];
@@ -1924,31 +2044,51 @@ function ProjectModal({ project, onClose }) {
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "flex flex-col justify-center items-center p-10 bg-[#222222] text-white text-center",
+                                        className: "flex flex-col gap-4",
                                         children: [
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                className: "font-[family-name:var(--font-mono)] text-[9px] text-[#7B7B7B] uppercase tracking-[0.3em] mb-4",
-                                                children: "System Performance"
-                                            }, void 0, false, {
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                className: "flex flex-col justify-center items-center p-10 bg-[#222222] text-white text-center h-full",
+                                                children: [
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                        className: "font-[family-name:var(--font-mono)] text-[9px] text-[#7B7B7B] uppercase tracking-[0.3em] mb-4",
+                                                        children: "System Performance"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/components/projects/ProjectModal.tsx",
+                                                        lineNumber: 81,
+                                                        columnNumber: 19
+                                                    }, this),
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                        className: "text-6xl font-bold mb-2",
+                                                        children: project.metrics.accuracy
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/components/projects/ProjectModal.tsx",
+                                                        lineNumber: 82,
+                                                        columnNumber: 19
+                                                    }, this),
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                        className: "text-xs font-mono uppercase tracking-widest text-[#7B7B7B]",
+                                                        children: "Model Accuracy"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/components/projects/ProjectModal.tsx",
+                                                        lineNumber: 83,
+                                                        columnNumber: 19
+                                                    }, this)
+                                                ]
+                                            }, void 0, true, {
                                                 fileName: "[project]/components/projects/ProjectModal.tsx",
                                                 lineNumber: 80,
                                                 columnNumber: 17
                                             }, this),
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: "text-6xl font-bold mb-2",
-                                                children: project.metrics.accuracy
+                                            project.github && project.github !== "#" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                                href: project.github,
+                                                target: "_blank",
+                                                rel: "noopener noreferrer",
+                                                className: "flex justify-center items-center py-4 border-2 border-[#222222] text-[#222222] font-bold uppercase tracking-widest text-sm hover:bg-[#222222] hover:text-white transition-colors duration-300",
+                                                children: "View Source Code ↗"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/projects/ProjectModal.tsx",
-                                                lineNumber: 81,
-                                                columnNumber: 17
-                                            }, this),
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                className: "text-xs font-mono uppercase tracking-widest text-[#7B7B7B]",
-                                                children: "Model Accuracy"
-                                            }, void 0, false, {
-                                                fileName: "[project]/components/projects/ProjectModal.tsx",
-                                                lineNumber: 82,
-                                                columnNumber: 17
+                                                lineNumber: 86,
+                                                columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {

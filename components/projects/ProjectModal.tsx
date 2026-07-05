@@ -76,10 +76,22 @@ export default function ProjectModal({ project, onClose }: Props) {
                   ))}
                 </ul>
               </div>
-              <div className="flex flex-col justify-center items-center p-10 bg-[#222222] text-white text-center">
-                <span className="font-[family-name:var(--font-mono)] text-[9px] text-[#7B7B7B] uppercase tracking-[0.3em] mb-4">System Performance</span>
-                <div className="text-6xl font-bold mb-2">{project.metrics.accuracy}</div>
-                <span className="text-xs font-mono uppercase tracking-widest text-[#7B7B7B]">Model Accuracy</span>
+              <div className="flex flex-col gap-4">
+                <div className="flex flex-col justify-center items-center p-10 bg-[#222222] text-white text-center h-full">
+                  <span className="font-[family-name:var(--font-mono)] text-[9px] text-[#7B7B7B] uppercase tracking-[0.3em] mb-4">System Performance</span>
+                  <div className="text-6xl font-bold mb-2">{project.metrics.accuracy}</div>
+                  <span className="text-xs font-mono uppercase tracking-widest text-[#7B7B7B]">Model Accuracy</span>
+                </div>
+                {project.github && project.github !== "#" && (
+                  <a 
+                    href={project.github} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="flex justify-center items-center py-4 border-2 border-[#222222] text-[#222222] font-bold uppercase tracking-widest text-sm hover:bg-[#222222] hover:text-white transition-colors duration-300"
+                  >
+                    View Source Code ↗
+                  </a>
+                )}
               </div>
             </div>
           </div>
