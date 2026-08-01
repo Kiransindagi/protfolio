@@ -101,22 +101,7 @@ export const projects: Project[] = [
     output: "Agronomic advice & market insights",
     metrics: { accuracy: "High", latency: "Low", gain: "Zero Smartphone Req." }
   },
-  {
-    id: "supply-chain-ai",
-    modelId: "SYS_05",
-    title: "Global Supply Chain",
-    type: "Logistics",
-    status: "Deployed",
-    environment: "Web Dashboard",
-    description: "A real-time supply chain monitoring and decision platform. Track ships, cargo routes, and economic delays while an AI layer surfaces geopolitical risk, port disruption alerts, and route optimization suggestions — all on a live global map.",
-    keyComponents: ["Live ship & cargo tracking", "Geopolitical risk AI summarization", "Route optimization algorithm"],
-    techStack: "Python / FastAPI / React / Mapbox",
-    github: "#",
-    input: "Tracking Data & Global News",
-    process: "Data Aggregation → AI Risk Analysis",
-    output: "Disruption alerts & Rerouting plans",
-    metrics: { accuracy: "High", latency: "Real-time", gain: "Risk Mitigated" }
-  },
+
   {
     id: "openaudit",
     modelId: "SYS_06",

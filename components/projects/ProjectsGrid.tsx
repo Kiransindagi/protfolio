@@ -89,20 +89,7 @@ export default function ProjectsGrid() {
           ))}
         </div>
 
-        {/* Bottom Stat Strip */}
-        <div className="mt-20 grid grid-cols-2 md:grid-cols-4 border border-[#E5E5E5] bg-[#F8F8F8]">
-          {[
-            { label: "Total Systems", val: "7" },
-            { label: "Deployments", val: "5" },
-            { label: "Hardware Nodes", val: "1 (Raspberry Pi)" },
-            { label: "Model Sparsity", val: "70%" },
-          ].map((stat, i) => (
-            <div key={i} className="p-8 border-r border-[#E5E5E5] last:border-r-0 flex flex-col gap-2">
-              <span className="font-[family-name:var(--font-mono)] text-[9px] text-[#7B7B7B] uppercase tracking-widest">{stat.label}</span>
-              <span className="text-2xl font-bold text-[#222222] uppercase tracking-tight">{stat.val}</span>
-            </div>
-          ))}
-        </div>
+
       </div>
 
       {selectedProject && (
