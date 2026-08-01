@@ -11,7 +11,6 @@ type Award = {
 };
 
 const awards: Award[] = [
-  { title: "Computer Vision Specialization", org: "NVIDIA Deep Learning Institute", year: "2024", image: "https://placehold.co/1200x800/222222/FFFFFF/png?text=NVIDIA+Certificate" },
   { title: "Master Ethical Hacking & Cybersecurity", org: "Udemy · OCSALY Academy", year: "Sept. 7, 2025", image: "https://placehold.co/1200x800/222222/FFFFFF/png?text=CEH+Certificate" },
   { title: "30 Projects in 30 days of AI Bootcamp", org: "Udemy · School of AI", year: "Oct. 1, 2025", image: "https://placehold.co/1200x800/222222/FFFFFF/png?text=30+Projects+AI" },
   { title: "Corporate Finance Fundamentals", org: "Coursera", year: "Aug. 9, 2025", image: "https://placehold.co/1200x800/222222/FFFFFF/png?text=Finance+Fundamentals" },
