@@ -11,6 +11,7 @@ type Award = {
 };
 
 const awards: Award[] = [
+  { title: "Mastering MYSQL: Database Creation, Management & SQL Queries", org: "Udemy · Maria EduCare", year: "Sept. 5, 2025", image: "/certificates/mysql.pdf" },
   { title: "Master Ethical Hacking & Cybersecurity", org: "Udemy · OCSALY Academy", year: "Sept. 7, 2025", image: "/certificates/hacking.png" },
   { title: "30 Projects in 30 days of AI Bootcamp", org: "Udemy · School of AI", year: "Oct. 1, 2025", image: "/certificates/python_bootcamp.png" },
   { title: "Corporate Finance Fundamentals", org: "Coursera", year: "Aug. 9, 2025", image: "/certificates/corporate_finance.png" },
