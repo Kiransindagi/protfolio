@@ -13,6 +13,18 @@ export default function ProjectsGrid() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const scrollRef = useRef<HTMLDivElement>(null);
 
+  const handleScroll = (direction: 'left' | 'right') => {
+    if (scrollRef.current && scrollRef.current.children.length > 0) {
+      const cardWidth = scrollRef.current.children[0].clientWidth;
+      scrollRef.current.style.scrollBehavior = 'smooth';
+      if (direction === 'left') {
+        scrollRef.current.scrollBy({ left: -cardWidth });
+      } else {
+        scrollRef.current.scrollBy({ left: cardWidth });
+      }
+    }
+  };
+
   useEffect(() => {
     const interval = setInterval(() => {
       if (scrollRef.current && scrollRef.current.children.length > 0) {
@@ -69,7 +81,39 @@ export default function ProjectsGrid() {
             >
               A collection of systems ranging from national hackathons to experimental AI research. Circular loop interface.
             </motion.p>
+            <div className="flex gap-4 hidden md:flex">
+              <button 
+                onClick={() => handleScroll('left')} 
+                className="w-12 h-12 border border-[#E5E5E5] flex items-center justify-center hover:bg-[#222222] hover:text-white transition-colors text-lg"
+                aria-label="Previous project"
+              >
+                ←
+              </button>
+              <button 
+                onClick={() => handleScroll('right')} 
+                className="w-12 h-12 border border-[#E5E5E5] flex items-center justify-center hover:bg-[#222222] hover:text-white transition-colors text-lg"
+                aria-label="Next project"
+              >
+                →
+              </button>
+            </div>
           </div>
+        </div>
+
+        {/* Mobile controls */}
+        <div className="flex gap-4 mb-8 md:hidden">
+          <button 
+            onClick={() => handleScroll('left')} 
+            className="flex-1 h-12 border border-[#E5E5E5] flex items-center justify-center hover:bg-[#222222] hover:text-white transition-colors text-lg"
+          >
+            ←
+          </button>
+          <button 
+            onClick={() => handleScroll('right')} 
+            className="flex-1 h-12 border border-[#E5E5E5] flex items-center justify-center hover:bg-[#222222] hover:text-white transition-colors text-lg"
+          >
+            →
+          </button>
         </div>
 
         {/* Horizontal Carousel with Sharp Borders */}

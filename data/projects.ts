@@ -47,7 +47,7 @@ export const projects: Project[] = [
     description: "A real-time prompt optimization desktop app triggered via Ctrl+X — works like Grammarly or Whisper Flow but for AI prompts. Enhances prompt clarity, specificity, and output quality on the fly without switching context.",
     keyComponents: ["Global hotkey trigger (Ctrl+X)", "On-the-fly prompt optimization", "Context-aware LLM API integration"],
     techStack: "Python / PyQt / Electron / LLM API",
-    github: "#",
+    github: "https://github.com/Kiransindagi/prompt_x",
     input: "Raw User Prompt",
     process: "NLP Contextual Analysis → LLM Optimization",
     output: "Enhanced, highly specific AI prompt",
