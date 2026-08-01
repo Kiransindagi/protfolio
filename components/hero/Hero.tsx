@@ -66,7 +66,7 @@ export default function Hero() {
           >
             <TypeAnimation
               sequence={[
-                '6th Sem AIML Student.',
+                '7th Sem AIML Student.',
                 1000,
                 'Building Intelligent Systems That Scale.',
                 1000,
