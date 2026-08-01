@@ -6,7 +6,7 @@ const profileData = [
   { label: "FULL NAME", value: "Kiran Sindagi" },
   { label: "ORIGIN", value: "Bagalkot, Karnataka" },
   { label: "EDUCATION", value: "B.TECH CSE · GM University, Davangere, Karnataka." },
-  { label: "SEMESTER", value: "6th Semester", accent: true },
+  { label: "SEMESTER", value: "7th Semester", accent: true },
   { label: "SPECIALIZATION", value: "Artificial Intelligence and Machine Learning", accent: true },
   { label: "INTERNSHIP ", value: "Placement Intern - Gem Ventures, Davangere, Karnataka", accent: true },
 ];
