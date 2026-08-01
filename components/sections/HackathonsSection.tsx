@@ -34,7 +34,25 @@ export default function HackathonsSection() {
                 <p className="text-sm text-[#7B7B7B] font-[family-name:var(--font-mono)] uppercase tracking-widest mb-4">
                   {h.organizer} · {h.year}
                 </p>
-                <p className="text-[#444444] leading-relaxed max-w-2xl">{h.description}</p>
+                <p className="text-[#444444] leading-relaxed max-w-3xl mb-6">{h.description}</p>
+                
+                <div className="flex flex-wrap gap-4 mt-2">
+                  {h.certImage && (
+                    <a href={h.certImage} target="_blank" rel="noopener noreferrer" className="font-[family-name:var(--font-mono)] text-[10px] font-bold text-[#222222] uppercase tracking-widest border border-[#E5E5E5] bg-white px-4 py-2 hover:bg-[#222222] hover:text-white hover:border-[#222222] transition-colors inline-flex items-center gap-2">
+                      Certificate ↗
+                    </a>
+                  )}
+                  {h.teamImage && (
+                    <a href={h.teamImage} target="_blank" rel="noopener noreferrer" className="font-[family-name:var(--font-mono)] text-[10px] font-bold text-[#222222] uppercase tracking-widest border border-[#E5E5E5] bg-white px-4 py-2 hover:bg-[#222222] hover:text-white hover:border-[#222222] transition-colors inline-flex items-center gap-2">
+                      Team Photo ↗
+                    </a>
+                  )}
+                  {h.solutionPdf && (
+                    <a href={h.solutionPdf} target="_blank" rel="noopener noreferrer" className="font-[family-name:var(--font-mono)] text-[10px] font-bold text-[#222222] uppercase tracking-widest border border-[#E5E5E5] bg-white px-4 py-2 hover:bg-[#222222] hover:text-white hover:border-[#222222] transition-colors inline-flex items-center gap-2">
+                      Solution PDF ↗
+                    </a>
+                  )}
+                </div>
               </div>
 
               <div className="shrink-0 md:text-right">
