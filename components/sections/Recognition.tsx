@@ -11,27 +11,41 @@ type Award = {
 };
 
 const awards: Award[] = [
-  { title: "NVIDIA DEEP LEARNING INSTITUTE", org: "Computer Vision Specialization", year: "2024", image: "https://placehold.co/1200x800/222222/FFFFFF/png?text=NVIDIA+Certificate" },
-  { title: "KAGGLE BRONZE MEDAL", org: "Plant Pathology Challenge", year: "2023", image: "https://placehold.co/1200x800/222222/FFFFFF/png?text=Kaggle+Bronze+Medal" },
-  { title: "DEEPLEARNING.AI", org: "Natural Language Processing Specialization", year: "2022", image: "https://placehold.co/1200x800/222222/FFFFFF/png?text=DeepLearning.AI+Certificate" },
+  { title: "Computer Vision Specialization", org: "NVIDIA Deep Learning Institute", year: "2024", image: "https://placehold.co/1200x800/222222/FFFFFF/png?text=NVIDIA+Certificate" },
+  { title: "Master Ethical Hacking & Cybersecurity", org: "Udemy · OCSALY Academy", year: "Sept. 7, 2025", image: "https://placehold.co/1200x800/222222/FFFFFF/png?text=CEH+Certificate" },
+  { title: "30 Projects in 30 days of AI Bootcamp", org: "Udemy · School of AI", year: "Oct. 1, 2025", image: "https://placehold.co/1200x800/222222/FFFFFF/png?text=30+Projects+AI" },
+  { title: "Corporate Finance Fundamentals", org: "Coursera", year: "Aug. 9, 2025", image: "https://placehold.co/1200x800/222222/FFFFFF/png?text=Finance+Fundamentals" },
+  { title: "Introduction to Fintech", org: "Great Learning", year: "July 2024", image: "https://placehold.co/1200x800/222222/FFFFFF/png?text=Fintech+Certificate" },
+  { title: "Data Science & AI Advanced Full Course", org: "Udemy · School of AI", year: "Aug. 1, 2026", image: "https://placehold.co/1200x800/222222/FFFFFF/png?text=Data+Science+AI" },
 ];
 
 export default function Recognition() {
   const [selectedCert, setSelectedCert] = useState<Award | null>(null);
 
+  const duplicatedAwards = [...awards, ...awards, ...awards];
+
   return (
-    <section className="relative w-full py-24 bg-[#F8F8F8] border-t border-[#E5E5E5]">
-      <div className="container">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-[#E5E5E5] border border-[#E5E5E5]">
-          {awards.map((award, i) => (
-            <motion.div
+    <section className="relative w-full py-24 bg-[#F8F8F8] border-t border-[#E5E5E5] overflow-hidden">
+      <div className="container mb-16">
+        <span className="font-[family-name:var(--font-mono)] text-[10px] text-[#7B7B7B] uppercase tracking-[0.4em] mb-4 block">SECTION 05 / RECOGNITION</span>
+        <h2 className="text-6xl font-bold text-[#222222] uppercase tracking-tighter">Certifications</h2>
+      </div>
+
+      <div className="w-[100vw] relative left-1/2 -translate-x-1/2 bg-[#E5E5E5] border-y border-[#E5E5E5] flex">
+        <motion.div
+          className="flex gap-px w-max"
+          animate={{ x: ["0%", "-33.333333%"] }}
+          transition={{
+            ease: "linear",
+            duration: 35,
+            repeat: Infinity,
+          }}
+        >
+          {duplicatedAwards.map((award, i) => (
+            <div
               key={i}
               onClick={() => setSelectedCert(award)}
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
-              className="bg-white p-10 flex flex-col justify-between hover:bg-[#222222] hover:text-white transition-all group cursor-pointer"
+              className="w-[350px] shrink-0 bg-white p-10 flex flex-col justify-between hover:bg-[#222222] hover:text-white transition-all group cursor-pointer border-r border-[#E5E5E5]"
             >
               <div className="font-[family-name:var(--font-mono)] text-[9px] text-[#7B7B7B] group-hover:text-[#7B7B7B] uppercase tracking-widest mb-6 flex justify-between items-center">
                 <span>{award.year}</span>
@@ -41,9 +55,9 @@ export default function Recognition() {
                 <h3 className="text-lg font-bold uppercase tracking-tight leading-tight mb-2">{award.title}</h3>
                 <p className="font-[family-name:var(--font-mono)] text-[10px] text-[#7B7B7B] uppercase tracking-widest">{award.org}</p>
               </div>
-            </motion.div>
+            </div>
           ))}
-        </div>
+        </motion.div>
       </div>
 
       {/* Certification Modal */}
