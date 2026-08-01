@@ -22,6 +22,22 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: "ai-support-crm",
+    modelId: "SYS_00",
+    title: "AI Support CRM Pro",
+    type: "SaaS · Full-stack AI",
+    status: "Deployed",
+    environment: "Web Application",
+    description: "A full-stack AI-powered Customer Support CRM built with FastAPI, React, and OpenAI. Features automated ticket categorization, sentiment analysis, and intelligent fallback handling. Developed as a production-ready MVP.",
+    keyComponents: ["OpenAI integration for sentiment & categorization", "JWT Auth & REST API", "Intelligent fallback for high availability"],
+    techStack: "FastAPI / React / OpenAI / SQLite",
+    github: "https://github.com/Kiransindagi/AI-Support-CRM-Pro",
+    input: "Customer Support Tickets",
+    process: "Ticket Creation → AI Analysis → Dashboard",
+    output: "Categorized & Analyzed Tickets",
+    metrics: { accuracy: "High", latency: "Real-time", gain: "End-to-End" }
+  },
+  {
     id: "promptx",
     modelId: "SYS_01",
     title: "PromptX",
