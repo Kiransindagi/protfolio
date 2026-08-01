@@ -72,11 +72,11 @@ export default function IdentityProfile() {
             <div className="pt-10 grid grid-cols-2 gap-10">
               <div>
                 <span className="font-[family-name:var(--font-mono)] text-[9px] text-[#7B7B7B] uppercase tracking-widest mb-2 block">CUMULATIVE GPA</span>
-                <span className="text-3xl font-bold text-[#222222]">8.19 / 10</span>
+                <span className="text-3xl font-bold text-[#222222]">8.26 / 10</span>
               </div>
               <div>
                 <span className="font-[family-name:var(--font-mono)] text-[9px] text-[#7B7B7B] uppercase tracking-widest mb-2 block">PROJECTS COMPLETED</span>
-                <span className="text-3xl font-bold text-[#222222]">6+</span>
+                <span className="text-3xl font-bold text-[#222222]">10+</span>
               </div>
             </div>
           </motion.div>

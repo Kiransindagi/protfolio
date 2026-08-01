@@ -3,17 +3,16 @@
 import { motion } from 'framer-motion';
 
 const skills = [
-  { title: "Programming", tools: "Python (primary) · Java · C · PHP", level: 95 },
-  { title: "Generative AI / LLMs", tools: "HuggingFace · LangChain · Mistral · Agent workflows", level: 92 },
-  { title: "AI / Machine Learning", tools: "ML pipelines · Deep learning · Model optimization", level: 90 },
-  { title: "Computer Vision", tools: "OpenCV · YOLOv8 · ResNet · Object detection", level: 90 },
-  { title: "Data Science", tools: "EDA · Feature engineering · Data visualization", level: 88 },
-  { title: "ML Libraries", tools: "NumPy · Pandas · Scikit-learn · TensorFlow", level: 88 },
-  { title: "Backend / APIs", tools: "FastAPI · REST APIs · MySQL · DBMS", level: 85 },
-  { title: "Edge AI / IoT", tools: "TFLite · Raspberry Pi · C++ · Quantization", level: 85 },
-  { title: "Cloud / DevOps", tools: "AWS (basics) · Docker · Deployment fundamentals", level: 80 },
-  { title: "CS Fundamentals", tools: "OOP (Java) · DBMS · Computer Networks", level: 85 },
-  { title: "Dev Tools", tools: "Jupyter Notebook · Google Colab · Git", level: 90 },
+  { title: "Programming", tools: "Python (Primary) · Java · SQL · JavaScript · TypeScript · C · PHP", level: 95 },
+  { title: "Generative AI & LLMs", tools: "Hugging Face · LangChain · LlamaIndex · RAG · AI Agents · Prompt Engineering · OpenAI GPT · Gemini · Claude · Vector Databases", level: 92 },
+  { title: "AI / Machine Learning", tools: "ML Pipelines · Deep Learning · Model Training · Model Evaluation · Feature Engineering · Model Optimization", level: 90 },
+  { title: "Computer Vision", tools: "OpenCV · TensorFlow · YOLOv8 · ResNet · Object Detection · Image Processing", level: 90 },
+  { title: "Data Science", tools: "NumPy · Pandas · Data Cleaning · EDA · Data Visualization · Statistical Analysis", level: 88 },
+  { title: "ML Frameworks", tools: "Scikit-learn · TensorFlow · Keras · XGBoost", level: 88 },
+  { title: "Backend & APIs", tools: "FastAPI · REST APIs · PostgreSQL · MySQL · API Integration", level: 85 },
+  { title: "Frontend", tools: "React.js · Next.js · HTML5 · CSS3", level: 80 },
+  { title: "DevOps & Deployment", tools: "Docker · Git · GitHub · Linux · CI/CD · Hugging Face Spaces · Vercel", level: 85 },
+  { title: "Development Tools", tools: "VS Code · Jupyter Notebook · Google Colab · Postman", level: 90 },
 ];
 
 export default function SkillsGrid() {

@@ -26,7 +26,7 @@ export default function ContactSection() {
               <div>
                 <span className="font-[family-name:var(--font-mono)] text-[10px] text-[#7B7B7B] uppercase tracking-widest block mb-4 border-b border-[#E5E5E5] pb-2">Social</span>
                 <div className="flex gap-6 flex-wrap">
-                  <a href="https://linkedin.com/in/kiran-sindagi-a14a6a270" target="_blank" className="text-xl font-bold text-[#222222] uppercase tracking-tight hover:text-[#7B7B7B] transition-colors">LinkedIn</a>
+                  <a href="https://www.linkedin.com/in/kiransindagi" target="_blank" className="text-xl font-bold text-[#222222] uppercase tracking-tight hover:text-[#7B7B7B] transition-colors">LinkedIn</a>
                   <a href="https://github.com/Kiransindagi" target="_blank" className="text-xl font-bold text-[#222222] uppercase tracking-tight hover:text-[#7B7B7B] transition-colors">GitHub</a>
                   <a href="https://huggingface.co/kiransin" target="_blank" className="text-xl font-bold text-[#222222] uppercase tracking-tight hover:text-[#7B7B7B] transition-colors">HuggingFace</a>
                 </div>
