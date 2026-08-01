@@ -23,10 +23,10 @@ export default function ProjectCard({ project, index }: Props) {
       className="bg-white p-8 md:p-10 flex flex-col gap-6 border-b border-r border-[#E5E5E5] transition-all duration-500 group relative h-full overflow-hidden"
     >
       {/* Background Hover Effect */}
-      <div 
-        className={`absolute inset-0 bg-gradient-to-br from-blue-50/50 via-purple-50/20 to-transparent transition-opacity duration-500 ${isHovered ? 'opacity-100' : 'opacity-0'}`} 
+      <div
+        className={`absolute inset-0 bg-gradient-to-br from-blue-50/50 via-purple-50/20 to-transparent transition-opacity duration-500 ${isHovered ? 'opacity-100' : 'opacity-0'}`}
       />
-      
+
       {/* Top Bar */}
       <div className="relative flex justify-between items-start z-10">
         <span className="font-[family-name:var(--font-mono)] text-sm font-bold text-[#CCCCCC] group-hover:text-blue-600 transition-colors duration-300">
@@ -67,20 +67,20 @@ export default function ProjectCard({ project, index }: Props) {
       {(project.input || project.process || project.output) && (
         <div className="relative z-10 mt-4 p-4 bg-gray-50 border border-gray-100 rounded-sm overflow-hidden group-hover:border-blue-100 group-hover:shadow-sm transition-all duration-300">
           <div className="flex flex-col gap-3">
-             <div className="flex items-center gap-2 text-xs">
-                <span className="text-[9px] font-bold text-blue-600 uppercase tracking-widest min-w-[60px]">Input</span>
-                <span className="text-gray-600 font-[family-name:var(--font-mono)] text-[10px] truncate">{project.input}</span>
-             </div>
-             <div className="w-px h-3 bg-gray-300 ml-[30px]" />
-             <div className="flex items-center gap-2 text-xs">
-                <span className="text-[9px] font-bold text-purple-600 uppercase tracking-widest min-w-[60px]">Process</span>
-                <span className="text-gray-600 font-[family-name:var(--font-mono)] text-[10px] truncate">{project.process}</span>
-             </div>
-             <div className="w-px h-3 bg-gray-300 ml-[30px]" />
-             <div className="flex items-center gap-2 text-xs">
-                <span className="text-[9px] font-bold text-emerald-600 uppercase tracking-widest min-w-[60px]">Output</span>
-                <span className="text-gray-800 font-medium text-[11px] truncate">{project.output}</span>
-             </div>
+            <div className="flex items-center gap-2 text-xs">
+              <span className="text-[9px] font-bold text-blue-600 uppercase tracking-widest min-w-[60px]">Input</span>
+              <span className="text-gray-600 font-[family-name:var(--font-mono)] text-[10px] truncate">{project.input}</span>
+            </div>
+            <div className="w-px h-3 bg-gray-300 ml-[30px]" />
+            <div className="flex items-center gap-2 text-xs">
+              <span className="text-[9px] font-bold text-purple-600 uppercase tracking-widest min-w-[60px]">Process</span>
+              <span className="text-gray-600 font-[family-name:var(--font-mono)] text-[10px] truncate">{project.process}</span>
+            </div>
+            <div className="w-px h-3 bg-gray-300 ml-[30px]" />
+            <div className="flex items-center gap-2 text-xs">
+              <span className="text-[9px] font-bold text-emerald-600 uppercase tracking-widest min-w-[60px]">Output</span>
+              <span className="text-gray-800 font-medium text-[11px] truncate">{project.output}</span>
+            </div>
           </div>
         </div>
       )}
@@ -108,7 +108,7 @@ export default function ProjectCard({ project, index }: Props) {
           VIEW SYSTEM <span className="text-lg leading-none">→</span>
         </a>
       </div>
-      
+
       {/* Active Line Indicator */}
       <div className={`absolute bottom-0 left-0 h-1 bg-gradient-to-r from-blue-600 to-purple-600 transition-all duration-500 ease-out ${isHovered ? 'w-full' : 'w-0'}`} />
     </motion.div>
