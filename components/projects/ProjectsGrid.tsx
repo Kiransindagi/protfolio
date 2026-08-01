@@ -6,6 +6,8 @@ import { projects, type Project } from '@/data/projects';
 import ProjectCard from './ProjectCard';
 import ProjectModal from './ProjectModal';
 
+import OSModal from './OSModal';
+
 // Duplicate projects for infinite loop
 const duplicatedProjects = [...projects, ...projects];
 
@@ -82,21 +84,26 @@ export default function ProjectsGrid() {
             <div 
               key={`${p.id}-${i}`} 
               onClick={() => setSelectedProject(p)} 
-              className="cursor-pointer shrink-0 w-full md:w-1/2 snap-start flex flex-col"
+              className="cursor-pointer shrink-0 w-full md:w-1/2 snap-start flex flex-col group"
             >
               <ProjectCard project={p} index={i} />
             </div>
           ))}
         </div>
-
-
       </div>
 
       {selectedProject && (
-        <ProjectModal 
-          project={selectedProject} 
-          onClose={() => setSelectedProject(null)} 
-        />
+        selectedProject.id === 'openaudit' ? (
+          <OSModal 
+            project={selectedProject} 
+            onClose={() => setSelectedProject(null)} 
+          />
+        ) : (
+          <ProjectModal 
+            project={selectedProject} 
+            onClose={() => setSelectedProject(null)} 
+          />
+        )
       )}
     </section>
   );
