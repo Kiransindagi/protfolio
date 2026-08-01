@@ -104,20 +104,8 @@ export default function ProjectCard({ project, index }: Props) {
         <span className="font-[family-name:var(--font-mono)] text-[9px] text-[#7B7B7B] uppercase tracking-widest">
           {project.techStack}
         </span>
-        <a href={project.github} onClick={(e) => {
-          if (project.id === 'openaudit') {
-            e.preventDefault();
-            // Let the parent handle the click, we'll just style it
-          }
-        }} className="font-[family-name:var(--font-mono)] text-[9px] font-bold text-[#222222] uppercase tracking-widest hover:text-blue-600 hover:translate-x-2 transition-all flex items-center gap-1">
-          {project.id === 'openaudit' ? (
-            <span className="flex items-center gap-2">
-              <span className="w-2 h-2 bg-blue-500 rounded-full animate-pulse" />
-              INITIALIZE SYSTEM
-            </span>
-          ) : (
-            <>VIEW SYSTEM <span className="text-lg leading-none">→</span></>
-          )}
+        <a href={project.github} className="font-[family-name:var(--font-mono)] text-[9px] font-bold text-[#222222] uppercase tracking-widest hover:text-blue-600 hover:translate-x-2 transition-all flex items-center gap-1">
+          VIEW SYSTEM <span className="text-lg leading-none">→</span>
         </a>
       </div>
       
