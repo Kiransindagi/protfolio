@@ -25,7 +25,7 @@ export default function Home() {
       <ProjectsGrid />
       <FutureVision />
       <ContactSection />
-      <SystemStatusHUD />
+
     </main>
   );
 }
