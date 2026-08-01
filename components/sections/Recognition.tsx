@@ -11,11 +11,11 @@ type Award = {
 };
 
 const awards: Award[] = [
-  { title: "Master Ethical Hacking & Cybersecurity", org: "Udemy · OCSALY Academy", year: "Sept. 7, 2025", image: "https://placehold.co/1200x800/222222/FFFFFF/png?text=CEH+Certificate" },
-  { title: "30 Projects in 30 days of AI Bootcamp", org: "Udemy · School of AI", year: "Oct. 1, 2025", image: "https://placehold.co/1200x800/222222/FFFFFF/png?text=30+Projects+AI" },
-  { title: "Corporate Finance Fundamentals", org: "Coursera", year: "Aug. 9, 2025", image: "https://placehold.co/1200x800/222222/FFFFFF/png?text=Finance+Fundamentals" },
-  { title: "Introduction to Fintech", org: "Great Learning", year: "July 2024", image: "https://placehold.co/1200x800/222222/FFFFFF/png?text=Fintech+Certificate" },
-  { title: "Data Science & AI Advanced Full Course", org: "Udemy · School of AI", year: "Aug. 1, 2026", image: "https://placehold.co/1200x800/222222/FFFFFF/png?text=Data+Science+AI" },
+  { title: "Master Ethical Hacking & Cybersecurity", org: "Udemy · OCSALY Academy", year: "Sept. 7, 2025", image: "/certificates/hacking.png" },
+  { title: "30 Projects in 30 days of AI Bootcamp", org: "Udemy · School of AI", year: "Oct. 1, 2025", image: "/certificates/python_bootcamp.png" },
+  { title: "Corporate Finance Fundamentals", org: "Coursera", year: "Aug. 9, 2025", image: "/certificates/corporate_finance.png" },
+  { title: "Introduction to Fintech", org: "Great Learning", year: "July 2024", image: "/certificates/fintech.png" },
+  { title: "Data Science & AI Advanced Full Course", org: "Udemy · School of AI", year: "Aug. 1, 2026", image: "/certificates/data_science.pdf" },
 ];
 
 export default function Recognition() {
@@ -89,11 +89,19 @@ export default function Recognition() {
                 </button>
               </div>
               <div className="p-8 bg-white flex justify-center items-center overflow-hidden">
-                <img 
-                  src={selectedCert.image} 
-                  alt={selectedCert.title} 
-                  className="max-h-[70vh] w-auto object-contain border border-[#E5E5E5] shadow-sm"
-                />
+                {selectedCert.image.endsWith('.pdf') ? (
+                  <iframe 
+                    src={selectedCert.image} 
+                    title={selectedCert.title} 
+                    className="h-[70vh] w-full max-w-3xl border border-[#E5E5E5] shadow-sm"
+                  />
+                ) : (
+                  <img 
+                    src={selectedCert.image} 
+                    alt={selectedCert.title} 
+                    className="max-h-[70vh] w-auto object-contain border border-[#E5E5E5] shadow-sm"
+                  />
+                )}
               </div>
             </motion.div>
           </div>
