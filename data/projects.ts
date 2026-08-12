@@ -212,6 +212,21 @@ export const projects: Project[] = [
     input: "Applicant Financial & Employment History",
     process: "Preprocessing → Scorecard Modeling → Cost-Sensitive Evaluation",
     output: "Credit Risk Classification + Justification",
-    metrics: { accuracy: "94% Recall", latency: "Batch", gain: "Cost-Sensitive" }
+  },
+  {
+    id: "iot-temp-prediction",
+    modelId: "SYS_13",
+    title: "IoT Temp Monitor & Predict",
+    type: "Hardware · IoT",
+    status: "Completed",
+    environment: "Physical Prototype",
+    description: "Completed hands-on development of IoT and embedded-system prototypes using Arduino, ESP32, and Raspberry Pi. Implemented temperature-focused monitoring and prediction workflows, connecting physical sensor inputs with software-based data processing.",
+    keyComponents: ["Hardware-software integration", "Sensor interfacing & LCD display", "Temperature prediction workflow"],
+    techStack: "Arduino / ESP32 / Raspberry Pi",
+    github: "#",
+    input: "Physical Sensor Inputs",
+    process: "Sensor Interfacing → Data Processing → Real-time Prediction",
+    output: "Processed Readings & LCD Interface",
+    metrics: { accuracy: "Real-time", latency: "Low", gain: "Hardware Int." }
   }
 ];

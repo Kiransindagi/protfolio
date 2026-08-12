@@ -13,6 +13,7 @@ const skills = [
   { title: "Frontend", tools: "React.js · Next.js · HTML5 · CSS3", level: 80 },
   { title: "DevOps & Deployment", tools: "Docker · Git · GitHub · Linux · CI/CD · Hugging Face Spaces · Vercel", level: 85 },
   { title: "Development Tools", tools: "VS Code · Jupyter Notebook · Google Colab · Postman", level: 90 },
+  { title: "Embedded Systems & IoT", tools: "Arduino · ESP32 · Raspberry Pi · C++ · Sensor Integration · Hardware-Software Integration", level: 85 },
 ];
 
 export default function SkillsGrid() {
