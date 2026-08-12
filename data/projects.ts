@@ -212,6 +212,7 @@ export const projects: Project[] = [
     input: "Applicant Financial & Employment History",
     process: "Preprocessing → Scorecard Modeling → Cost-Sensitive Evaluation",
     output: "Credit Risk Classification + Justification",
+    metrics: { accuracy: "94% Recall", latency: "Batch", gain: "Cost-Sensitive" }
   },
   {
     id: "iot-temp-prediction",
